@@ -12,6 +12,6 @@ import com.example.bonvoy.model.Register;
 public interface RegisterRepo extends JpaRepository<Register, Integer>{
 
 	@Query(value = "Select * from registers Where email = :email AND passcode = :passcode", nativeQuery = true)
-	List<Register> findBy(String email, String passcode);
+	Register findBy(String email, String passcode);
 		
 }

@@ -18,7 +18,7 @@ import com.example.bonvoy.model.Register;
 
 @RestController
 @RequestMapping("/register")
-@CrossOrigin(origins = "http://localhost:3003")
+//@CrossOrigin(origins = "http://localhost:3000")
 public class RegisterController {
 @Autowired
 private RegisterRepo registerRepo; 
@@ -37,7 +37,7 @@ public ResponseEntity<?> findby(@RequestParam String email, String passcode){
 	System.out.println("==Email==="+email);
 	System.out.println("==Password==="+passcode);
 
-    List<Register> regist = registerRepo.findBy(email,passcode);
+    Register regist = registerRepo.findBy(email,passcode);
     return ResponseEntity
     		.status(HttpStatus.OK)
     		.body(regist);
