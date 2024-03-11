@@ -43,6 +43,12 @@ public ResponseEntity<?> findby(@RequestParam String email, String passcode){
     		.body(regist);
 		
 }
+@GetMapping("/userdetails")
+public ResponseEntity<?> getdetails(){
+    List<Register> register = registerRepo.findAll();
+    return ResponseEntity.status(HttpStatus.OK)
+            .body(register);  
+}
 //@GetMapping("/delete")
 //public ResponseEntity<?> deleteStudent(@RequestParam int id){
 //	  Student stud = studentRepository.findById(id).get();
