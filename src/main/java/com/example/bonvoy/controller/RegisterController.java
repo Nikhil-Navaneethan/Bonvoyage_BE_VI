@@ -49,6 +49,8 @@ public ResponseEntity<?> getdetails(){
     return ResponseEntity.status(HttpStatus.OK)
             .body(register);  
 }
+
+
 //@GetMapping("/delete")
 //public ResponseEntity<?> deleteStudent(@RequestParam int id){
 //	  Student stud = studentRepository.findById(id).get();
